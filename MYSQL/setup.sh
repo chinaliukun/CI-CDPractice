@@ -5,3 +5,4 @@ sleep 3
 mysql < /mysql/schema.sql
 sleep 3
 mysql < /mysql/privileges.sql
+tail -f /dev/null
