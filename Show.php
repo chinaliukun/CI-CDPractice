@@ -22,7 +22,7 @@ require_once 'DBUtil.php';
             ?>
         </div>
         <div  class="msg-form-box">
-            <form class="msg-form" action="add.php" method="POST">
+            <form class="msg-form" action="Add.php" method="POST">
                 <input class="msg-input" type="text" name="msg" value="" placeholder="请输入你的留言"/>
                 <input class="msg-button" type="submit" value="提交"/>
             </form>
