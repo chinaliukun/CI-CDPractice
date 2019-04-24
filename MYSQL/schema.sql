@@ -1,0 +1,9 @@
+﻿CREATE DATABASE msgboard DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE msgboard ;
+DROP TABLE IF EXISTS  `msg`;
+CREATE TABLE `msg` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `msg` varchar(1000) DEFAULT NULL,
+  `createdTime` datetime DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
