@@ -1,10 +1,4 @@
 <?php
-/**
- *  Author: Kun
- *  Date: 2019-04-01
- *  Class name: DB
- *  Used for connecting database.
- */
 class DB
 {
     public $host = "localhost";

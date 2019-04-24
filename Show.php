@@ -4,7 +4,6 @@ require_once 'DBUtil.php';
     $DB = new DB;
     $result = $DB->Query($sql);
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
