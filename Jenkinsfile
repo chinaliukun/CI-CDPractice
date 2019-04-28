@@ -1,20 +1,12 @@
 Jinkinsfile (Scripted Pipeline)
-pipeline{
-    agent any
-
-    stage('Build'){
-        steps{
-            echo 'Building'
-        }
+node {
+    stage('Build'){    
+        echo 'Building'
     }
     stage('Test'){
-        steps{
-            echo 'Testing'
-        }
+        echo 'Testing'
     }
     stage('Deploy'){
-        steps{
-            echo 'Deploying'
-        }
+        echo 'Deploying'
     }
 }
