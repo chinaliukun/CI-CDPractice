@@ -1,7 +1,9 @@
 node {
     stage('Build'){    
-        git 'https://github.com/chinaliukun/CI-CDPractice.git'
         echo 'Building'
+        git 'https://github.com/chinaliukun/CI-CDPractice.git'
+        sh 'sudo docker build -t CICD/mysql:1 MYSQL/'
+        sh 'sudo docker build -t CICD/phphttpd:1 PHP7.2/'
     }
     stage('Test'){
         sh 'cat Readme.md'
