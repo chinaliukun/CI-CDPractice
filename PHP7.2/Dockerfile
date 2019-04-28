@@ -1,4 +1,5 @@
 FROM php:7.2-apache
+COPY sources.list /etc/apt/sources.list
 RUN sed -i 's|cdn-fastly.deb.debian.org|mirrors.ustc.edu.cn|g' /etc/apt/sources.list \
     && sed -i 's|security-cdn.debian.org|mirrors.ustc.edu.cn|g' /etc/apt/sources.list
 RUN apt-get update && apt-get install -y git
