@@ -1,4 +1,4 @@
-Jinkinsfile (Declarative Pipeline)
+Jinkinsfile (Scripted Pipeline)
 pipeline{
     agent any
 
