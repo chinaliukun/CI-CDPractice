@@ -8,6 +8,7 @@ node {
         echo 'Testing'
     }
     stage('Deploy'){
+        sh 'microk8s.kubectl get nodes'
         echo 'Deploying'
     }
 }
