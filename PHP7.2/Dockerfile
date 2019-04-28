@@ -1,6 +1,6 @@
 FROM php:7.2-apache
 COPY sources.list /etc/apt/sources.list
-RUN rm -rf /etc/apt/souces.list.d/buster.list \
+RUN rm -rf /etc/apt/sources.list.d/buster.list \
   && apt-get update \
   && apt-get install -y git
 RUN docker-php-ext-install mysqli
