@@ -18,10 +18,10 @@ node {
         def dep_out = sh(script:"microk8s.kubectl get nodes",returnStatus: true)
         echo 'Deploying'
         if(dep_out == 0){
-            emailext body: 'Develop success!', subject: 'Develop success!', to: '392716762@qq.com'
+            emailext body: 'Develop success!', subject: '<h1>Develop success!</h1><p>项目名称：$PROJECT_NAME</p><p>构建编号：$BUILD_NUMBER</p>', to: '392716762@qq.com'
         }
         else{
-            emailext body: 'Develop success!', subject: 'Develop failed!', to: '392716762@qq.com'
+            emailext body: 'Develop success!', subject: '<h1>Develop failed!</h1><p>项目名称：$PROJECT_NAME</p><p>构建编号：$BUILD_NUMBER</p>', to: '392716762@qq.com'
         }
     }
 }
