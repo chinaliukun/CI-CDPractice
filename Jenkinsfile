@@ -2,7 +2,7 @@ node {
     stage('Build'){    
         echo 'Building'
         git 'https://github.com/chinaliukun/CI-CDPractice.git'
-        def integ_out =sh(script:"docker build -t cicd/mysql:1 MYSQL/ && docker build -t cicd/phphttpd:1 PHP7.2/",returnStatus :true)
+        def integ_out = sh(script:"docker build -t cicd/mysql:1 MYSQL/ && docker build -t cicd/phphttpd:1 PHP7.2/",returnStatus :true)
         if(integ_out == 0){
             emailext body: 'Build success!', subject: 'Build success!', to: '392716762@qq.com'
         }
