@@ -1,10 +1,14 @@
 node {
     stage('Build'){    
         echo 'Building'
-        sh 'whoami'
         git 'https://github.com/chinaliukun/CI-CDPractice.git'
-        sh 'docker build -t cicd/mysql:1 MYSQL/'
-        sh 'docker build -t cicd/phphttpd:1 PHP7.2/'
+        def integ_out sh(script:"docker build -t cicd/mysql:1 MYSQL/ && docker build -t cicd/phphttpd:1 PHP7.2/",returnStatus :true)
+        if(integ_out == 0){
+            emailext body: 'Build success!', subject: 'Build success!', to: '392716762@qq.com'
+        }
+        else{
+            emailext body: 'Build success!', subject: 'Build failed!', to: '392716762@qq.com'
+        }
     }
     stage('Test'){
         sh 'cat Readme.md'
