@@ -11,7 +11,13 @@ node {
         echo 'Testing'
     }
     stage('Deploy'){
-        sh 'microk8s.kubectl get nodes'
+        def dep_out = sh(script:"microk8s.kubectl get nodes",returnStatus: true)
         echo 'Deploying'
+        if(dep_out == 0){
+            emailext body: 'Develop success!', subject: 'Develop success!', to: '392716762@qq.com'
+        }
+        else(
+            emailext body: 'Develop success!', subject: 'Develop failed!', to: '392716762@qq.com'
+        )
     }
 }
