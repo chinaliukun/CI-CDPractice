@@ -16,8 +16,8 @@ node {
         if(dep_out == 0){
             emailext body: 'Develop success!', subject: 'Develop success!', to: '392716762@qq.com'
         }
-        else(
+        else{
             emailext body: 'Develop success!', subject: 'Develop failed!', to: '392716762@qq.com'
-        )
+        }
     }
 }
