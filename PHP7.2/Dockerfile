@@ -6,6 +6,6 @@ RUN rm -rf /etc/apt/sources.list.d/buster.list \
 RUN docker-php-ext-install mysqli
 WORKDIR /var/www/html
 COPY setup.sh setup.sh
-CMD [ "sh","setup.sh" ]
+CMD [ "bash","setup.sh" ]
 EXPOSE 80
 CMD [ "apache2-foreground" ]
