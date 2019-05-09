@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mysql
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
       - name: mysql
-        image: /mesgboard/mysql:1
+        image: mesgboard/mysql:1
         ports: 
         - containerPort: 3306
         
