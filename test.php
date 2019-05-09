@@ -12,7 +12,7 @@ class DBUtilTest extends TestCase{
      */
     public function testAddArgument(){
         $db = new DB();
-        $this->assertEquals($db->add(1,2,3),6);
+        $this->assertEquals($db->addPlus(1,2,3),6);
         unset($db);
     }
 }
