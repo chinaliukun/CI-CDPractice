@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
       - name: mesgboard
-        image: registry.cn-beijing.aliyuncs.com/mesgboard/mesgboard:1
+        image: mesgboard/mesgboard:1
         ports: 
         - containerPort: 80
         

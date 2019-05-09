@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
       - name: mysql
-        image: registry.cn-beijing.aliyuncs.com/mesgboard/mysql:1
+        image: /mesgboard/mysql:1
         ports: 
         - containerPort: 3306
         
