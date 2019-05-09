@@ -7,9 +7,6 @@ class DBUtilTest extends TestCase{
         $this->assertEquals($db->add(1,2),3);
         unset($db);
     }
-    /**
-     * @expectedException InvalidArgumentException
-     */
     public function testAddArgument(){
         $db = new DB();
         $this->assertEquals($db->addPlus(1,2,3),6);
