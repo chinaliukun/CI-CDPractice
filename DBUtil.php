@@ -1,7 +1,7 @@
 <?php
 class DB
 {
-    public $host = "db";
+    public $host = "mysql";
     public $username = "msgboard";
     public $passwd = "msgboard";
     public $dbname = "msgboard";

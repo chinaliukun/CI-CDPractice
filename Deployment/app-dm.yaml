@@ -1,0 +1,20 @@
+apiVersion: apps/vbeta1
+kind: Deployment
+metadata:
+  name: mesgboard
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mesgboard
+  template: 
+    metadata: 
+      labels:
+        app: mesgboard
+    spec: 
+      containers:
+      - name: mesgboard
+        image: mesgboard/mesgboard:1
+        ports: 
+        - containerPort: 80
+        
