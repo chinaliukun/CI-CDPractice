@@ -1,21 +1,13 @@
 <?php
 use PHPUnit\Framework\TestCase;
-
+require_once DBUtil.php;
 class DBUtilTest extends TestCase{
-    public $db;
     /**
      * @medium
      */
-    public function testDBConnectionOutTime(){
+    public function testDBConnectionError(){
         $db = new DB();
         $db->Query("show tables");
         unset($db);
-    }
-    /**
-     * @expectedException PHPUnit\Framework\Error
-     */
-    public function testDBConnectionError(){
-        $db= new DB();
-        $db->Query("show tables");
     }
 }
