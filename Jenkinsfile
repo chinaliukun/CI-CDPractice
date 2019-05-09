@@ -7,7 +7,7 @@ node {
             emailext body: '''<h1>Build success!</h1><p>Project name: ${JOB_NAME}</p><p>Build number: ${BUILD_NUMBER}</p>''', subject: 'Build success!', to: '392716762@qq.com'
         }
         else{
-            emailext body: '''<h1>Build success!</h1><p>Project name: ${JOB_NAME}</p><p>Build number: ${BUILD_NUMBER}</p>''', subject: 'Build failed!', to: '392716762@qq.com'
+            emailext body: '''<h1>Build failed!</h1><p>Project name: ${JOB_NAME}</p><p>Build number: ${BUILD_NUMBER}</p>''', subject: 'Build failed!', to: '392716762@qq.com'
         }
     }
     stage('Test'){
