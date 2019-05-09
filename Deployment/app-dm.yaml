@@ -15,6 +15,7 @@ spec:
       containers:
       - name: mesgboard
         image: mesgboard/mesgboard:1
+        imagePullPolicy: Never
         ports: 
         - containerPort: 80
         
