@@ -1,4 +1,4 @@
-apiVersion: apps/vbeta1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: mysql
