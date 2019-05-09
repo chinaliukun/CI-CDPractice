@@ -11,8 +11,13 @@ node {
         }
     }
     stage('Test'){
-        sh 'cat Readme.md'
+        def test_out = sh(script:"phpunit test.php",returnStatus: true)
         echo 'Testing'
+        if(test_out==0){
+            emailext body: '''<h1>Test success!</h1><p>Project name: ${JOB_NAME}</p><p>Test number: ${BUILD_NUMBER}</p>''', subject: 'Test success!', to: '392716762@qq.com'
+        }else{
+            emailext body: '''<h1>Test failed!</h1><p>Project name: ${JOB_NAME}</p><p>Test number: ${BUILD_NUMBER}</p>''', subject: 'Test failed!', to: '392716762@qq.com'
+        }
     }
     stage('Deploy'){
         def dep_out = sh(script:"kubectl apply -f Deployment/",returnStatus: true)
