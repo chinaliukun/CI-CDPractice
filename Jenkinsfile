@@ -15,7 +15,7 @@ node {
         echo 'Testing'
     }
     stage('Deploy'){
-        def dep_out = sh(script:"kubectl get nodes",returnStatus: true)
+        def dep_out = sh(script:"kubectl create -f Deployment/",returnStatus: true)
         echo 'Deploying'
         if(dep_out == 0){
             emailext body: '<h1>Develop sucess!</h1><p>Project name: ${env.PROJECT_NAME}</p><p>Build number: ${env.BUILD_NUMBER}</p>', subject: 'Develop sucess!', to: '392716762@qq.com'
