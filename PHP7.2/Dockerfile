@@ -4,7 +4,9 @@ RUN rm -rf /etc/apt/sources.list.d/buster.list \
   && apt-get update \
   && apt-get install -y git
 RUN docker-php-ext-install mysqli
-WORKDIR /var/www/html
+## 错误所在位置 正确语法为
+## WORKDIR /var/www/html
+WORKDIR /var/www/htm 
 COPY setup.sh setup.sh
 EXPOSE 80
 CMD [ "bash","setup.sh" ]
