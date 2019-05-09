@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require_once DBUtil.php;
+require_once("DBUtil.php");
 class DBUtilTest extends TestCase{
     /**
      * @medium
