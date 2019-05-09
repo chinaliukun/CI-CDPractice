@@ -15,5 +15,8 @@ class DB
             return $r;
         }
     }
+    public function add($a,$b){
+        return $a+$b;
+    }
 }
 ?>
