@@ -6,7 +6,7 @@ RUN rm -rf /etc/apt/sources.list.d/buster.list \
 RUN docker-php-ext-install mysqli
 ## 错误所在位置 正确语法为
 ## WORKDIR /var/www/html
-WORKDIR /var/www/htm 
+WORKDIRE /var/www/html 
 COPY setup.sh setup.sh
 EXPOSE 80
 CMD [ "bash","setup.sh" ]
