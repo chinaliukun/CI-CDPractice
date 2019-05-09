@@ -18,5 +18,8 @@ class DB
     public function add($a,$b){
         return $a+$b;
     }
+    public function addPlus($a=0,$b=0,$c=0){
+        return $a+$b+$c;
+    }
 }
 ?>
