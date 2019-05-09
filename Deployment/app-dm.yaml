@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mesgboard
 spec:
-  replicas: 3
+  replicans: 3 # 错误所在位置 正确语法为replicas
   selector:
     matchLabels:
       app: mesgboard
