@@ -9,6 +9,7 @@
 }
 .msg-title{
     text-align: center;
+    color:red;
 }
 .msg-list{
     min-height: 50px;
